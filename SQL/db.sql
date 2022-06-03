@@ -30,4 +30,13 @@ CREATE TABLE funcionario_empresa(
     id_empresa INT NOT NULL,
     FOREIGN KEY (id_usuario) REFERENCES tb_usuario(id),
     FOREIGN KEY (id_empresa) REFERENCES tb_empresa(id)
-)ENGINE=INNODB CHARSET=utf8
+)ENGINE=INNODB CHARSET=utf8;
+CREATE TABLE tb_transacoes(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_produto INT NOT NULL,
+    id_usuario INT NOT NULL,
+    id_empresa INT NOT NULL,
+    FOREIGN KEY (id_produto) REFERENCES tb_produto(id),
+    FOREIGN KEY (id_usuario) REFERENCES tb_usuario(id),
+    FOREIGN KEY (id_empresa) REFERENCES tb_empresa(id)
+)ENGINE=INNODB CHARSET=utf8;
