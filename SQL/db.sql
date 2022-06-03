@@ -47,4 +47,6 @@ CREATE TABLE cardapio(
     id_produto INT NOT NULL,
     FOREIGN KEY (id_empresa) REFERENCES tb_empresa(id),
     FOREIGN KEY (id_produto) REFERENCES tb_produto(id)
-)ENGINE=INNODB CHARSET=utf8
+)ENGINE=INNODB CHARSET=utf8;
+INSERT INTO tb_niveis (id, nome)
+VALUES (null, "root"), (null, "cliente"), (null, "dono"), (null, "caixa"), (null, "funcionario");
