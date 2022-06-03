@@ -9,3 +9,9 @@ CREATE TABLE tb_empresa(
     email longtext NOT NULL,
     cnpj VARCHAR(15) NOT NULL
 )ENGINE=INNODB CHARSET=utf8;
+CREATE TABLE tb_produto(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(155) NOT NULL,
+    valor FLOAT NOT NULL,
+   	descricao LONGTEXT NOT NULL
+)ENGINE=INNODB CHARSET=utf8;
