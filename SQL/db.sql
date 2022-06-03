@@ -36,6 +36,7 @@ CREATE TABLE tb_transacoes(
     id_produto INT NOT NULL,
     id_usuario INT NOT NULL,
     id_empresa INT NOT NULL,
+    dt_transacao DATE NOT NULL,
     FOREIGN KEY (id_produto) REFERENCES tb_produto(id),
     FOREIGN KEY (id_usuario) REFERENCES tb_usuario(id),
     FOREIGN KEY (id_empresa) REFERENCES tb_empresa(id)
