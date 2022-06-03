@@ -23,4 +23,11 @@ CREATE TABLE tb_usuario(
     telefone VARCHAR(15) NOT NULL,
     id_nivel INT NOT NULL,
     FOREIGN KEY (id_nivel) REFERENCES tb_niveis(id)
+)ENGINE=INNODB CHARSET=utf8;
+CREATE TABLE funcionario_empresa(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    id_empresa INT NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES tb_usuario(id),
+    FOREIGN KEY (id_empresa) REFERENCES tb_empresa(id)
 )ENGINE=INNODB CHARSET=utf8
