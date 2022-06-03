@@ -40,3 +40,10 @@ CREATE TABLE tb_transacoes(
     FOREIGN KEY (id_usuario) REFERENCES tb_usuario(id),
     FOREIGN KEY (id_empresa) REFERENCES tb_empresa(id)
 )ENGINE=INNODB CHARSET=utf8;
+CREATE TABLE cardapio(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_empresa INT NOT NULL,
+    id_produto INT NOT NULL,
+    FOREIGN KEY (id_empresa) REFERENCES tb_empresa(id),
+    FOREIGN KEY (id_produto) REFERENCES tb_produto(id)
+)ENGINE=INNODB CHARSET=utf8
