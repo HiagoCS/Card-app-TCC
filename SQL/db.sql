@@ -15,3 +15,12 @@ CREATE TABLE tb_produto(
     valor FLOAT NOT NULL,
    	descricao LONGTEXT NOT NULL
 )ENGINE=INNODB CHARSET=utf8;
+CREATE TABLE tb_usuario(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    email LONGTEXT NOT NULL,
+    senha LONGTEXT NOT NULL,
+    telefone VARCHAR(15) NOT NULL,
+    id_nivel INT NOT NULL,
+    FOREIGN KEY (id_nivel) REFERENCES tb_niveis(id)
+)ENGINE=INNODB CHARSET=utf8
