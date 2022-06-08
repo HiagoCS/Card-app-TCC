@@ -19,7 +19,8 @@
     "sequelize": "^6.20.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "sequelize-cli": "^6.4.1"
   },
   "private": true
 }
