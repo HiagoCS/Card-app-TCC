@@ -8,7 +8,7 @@ let app = express();
 app.use(cors({origin:'*'}));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
-app.post(process.env.REGISTERRT,async(req,res)=>{
+app.post(`/${process.env.REGISTERRT}`,async(req,res)=>{
     let reqs = await model.tb_usuario.create({
         'nome':req.body.nome,
         'email':req.body.email,
